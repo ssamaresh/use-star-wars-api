@@ -13,16 +13,25 @@ npm install --save @ssamaresh1990/use-star-wars-api
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import { useStarWarsAPI } from '@ssamaresh1990/use-star-wars-api'
 
-import { useMyHook } from '@ssamaresh1990/use-star-wars-api'
+const App = () => {
+  const {data, loading}= useStarWarsAPI()
 
-const Example = () => {
-  const example = useMyHook()
-  return (
-    <div>{example}</div>
-  )
+  if(loading) return <p>Loading...</p>
+
+  if(data) {
+    return (
+      <div>
+        {data}
+      </div>
+    )
+  }
+  return null;
 }
+
+export default App
 ```
 
 ## License
