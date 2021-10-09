@@ -1,6 +1,6 @@
 {
   "name": "@ssamaresh1990/use-star-wars-api",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A custom react hook that provides Star Wars Data",
   "author": "ssamaresh",
   "license": "MIT",
@@ -45,7 +45,7 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "@testing-library/react-hooks": "^3.2.1",
+    "@testing-library/react-hooks": "^7.0.2",
     "babel-eslint": "^10.0.1",
     "cross-env": "^5.2.0",
     "eslint": "5.16.0",

@@ -1,21 +1,19 @@
-import * as React from 'react'
+import { useState, useEffect } from "react";
 
-export const useMyHook = () => {
-  let [{
-    counter
-  }, setState] = React.useState({
-    counter: 0
-  })
-
-  React.useEffect(() => {
-    let interval = window.setInterval(() => {
-      counter++
-      setState({counter})
-    }, 1000)
-    return () => {
-      window.clearInterval(interval)
+export function useStarWarsAPI() {
+  const [data, setData] = useState("");
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    async function getStarWarsQuote() {
+      setLoading(true);
+      const response = await fetch("https://swapi.dev/api/species/");
+      const data = await response.json();
+      const quote = data.results[0].classification;
+      setData(quote);
+      setLoading(false);
     }
-  }, [])
-
-  return counter
+    getStarWarsQuote();
+  }, []);
+  return { data, loading };
 }
+ 
