@@ -1,6 +1,6 @@
 {
   "name": "@ssamaresh1990/use-star-wars-api",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A custom react hook that provides Star Wars Data",
   "author": "ssamaresh",
   "license": "MIT",
